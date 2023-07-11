@@ -1,12 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- fucking bufferline
-vim.api.nvim_set_keymap("n", "gt", ":BufferLineCycleNext<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "gT", ":BufferLineCyclePrev<cr>", { noremap = true })
+-- require vimrc
+vim.cmd("so ~/.config/nvim/vimrc.d/vimrc.vim")
 
-vim.cmd("colorscheme everforest")
-
+-- fix notify transparent warning
 require("notify").setup({
   background_colour = "#1a1b26",
 })
