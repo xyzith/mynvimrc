@@ -6,6 +6,8 @@ return {
   -- Optional; default configuration will be used if setup isn't called.
   config = function()
     require("everforest").setup({
+      disable_italic_comments = true,
+      enable_italic = false,
       -- Your config here
     })
   end,
