@@ -8,3 +8,10 @@ vim.cmd("so ~/.config/nvim/vimrc.d/vimrc.vim")
 require("notify").setup({
   background_colour = "#1a1b26",
 })
+
+-- ignore test
+require("telescope").setup({
+  defaults = {
+    file_ignore_patterns = { "tests/.*" },
+  },
+})

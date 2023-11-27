@@ -1,7 +1,7 @@
-colorscheme everforest
 set mouse=
 
 set cursorcolumn
+set noignorecase
 
 function S2t(p1)
 	execute "set tabstop=".a:p1
@@ -24,5 +24,3 @@ autocmd FocusGained * :let @+=substitute(@+, '\r', '', 'g')
 " My commandt
 command! -nargs=1 Stt call S2t(<f-args>)
 command! -nargs=1 Tts call T2s(<f-args>)
-
-
