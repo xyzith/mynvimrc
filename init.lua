@@ -15,3 +15,7 @@ require("telescope").setup({
     file_ignore_patterns = { "tests/.*" },
   },
 })
+
+require("lspconfig").biome.setup({
+  cmd = { "yarn", "biome", "lsp-proxy" },
+})
