@@ -1,6 +1,8 @@
 set mouse=
 
 set cursorcolumn
+set cursorline
+
 set noignorecase
 
 function S2t(p1)
