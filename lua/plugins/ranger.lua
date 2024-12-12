@@ -1,14 +1,34 @@
+-- return {
+--   "kelly-lin/ranger.nvim",
+--   config = function()
+--     require("ranger-nvim").setup({
+--       enable_cmds = true,
+--     })
+--     vim.api.nvim_set_keymap("n", "<leader>ef", "", {
+--       noremap = true,
+--       callback = function()
+--         require("ranger-nvim").open(true)
+--       end,
+--     })
+--   end,
+-- }
+
 return {
-  "kelly-lin/ranger.nvim",
+  "kevinhwang91/rnvimr",
+  init = function() end,
   config = function()
-    require("ranger-nvim").setup({
-      enable_cmds = true,
-    })
-    vim.api.nvim_set_keymap("n", "<leader>ef", "", {
-      noremap = true,
-      callback = function()
-        require("ranger-nvim").open(true)
-      end,
-    })
+    vim.keymap.set("n", "<leader>ef", ":RnvimrToggle<CR>")
+    vim.grnvimr_action = {
+      ["<C-t>"] = "NvimEdit tabedit",
+      ["<C-x>"] = "NvimEdit split",
+      ["<C-v>"] = "NvimEdit vsplit",
+      ["<C-e>"] = "NvimEdit edit",
+      gw = "JumpNvimCwd",
+      yw = "EmitRangerCwd",
+    }
+    vim.g.rnvimr_ranger_cmd = {
+      "ranger",
+      "--cmd=set preview_images true",
+    }
   end,
 }

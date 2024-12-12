@@ -33,3 +33,5 @@ autocmd FileType netrw setl bufhidden=wipe
 " My commandt
 command! -nargs=1 Stt call S2t(<f-args>)
 command! -nargs=1 Tts call T2s(<f-args>)
+
+set suffixesadd=.vue
