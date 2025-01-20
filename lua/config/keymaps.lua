@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 vim.keymap.set("n", "<leader>dc", ":call delete(expand('%')) | bdelete!")
 vim.api.nvim_del_keymap("n", "<A-j>") -- remove fucking switch line
+vim.keymap.set("n", "<leader>ac", ":Codeium Chat<CR>")
