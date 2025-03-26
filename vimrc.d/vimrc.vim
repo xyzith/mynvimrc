@@ -36,4 +36,4 @@ command! -nargs=1 Tts call T2s(<f-args>)
 
 set backup
 set backupdir=~/.vim/backup
-set suffixesadd=.vue
+set suffixesadd=.vue,.ts,.tsx

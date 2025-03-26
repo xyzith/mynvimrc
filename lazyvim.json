@@ -2,10 +2,12 @@
   "extras": [
     "lazyvim.plugins.extras.ai.codeium",
     "lazyvim.plugins.extras.ai.tabnine",
-    "lazyvim.plugins.extras.lang.vue"
+    "lazyvim.plugins.extras.lang.vue",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
+  "install_version": 7,
   "news": {
     "NEWS.md": "10960"
   },
-  "version": 7
+  "version": 8
 }
