@@ -23,12 +23,9 @@ endfunction
 " auto remove \r from system registers
 autocmd FocusGained * :let @+=substitute(@+, '\r', '', 'g')
 
-
-" gf use Neotree instead of Netrw
-let g:netrw_browsex_viewer="Neotree"
-let g:netrw_fasterbrowse=0
-autocmd FileType netrw setl bufhidden=wipe
-
+" empty function to mute error
+function! <SNR>16_LocalBrowse(p1)
+endfunction
 
 " My commandt
 command! -nargs=1 Stt call S2t(<f-args>)
@@ -37,3 +34,4 @@ command! -nargs=1 Tts call T2s(<f-args>)
 set backup
 set backupdir=~/.vim/backup
 set suffixesadd=.vue,.ts,.tsx
+

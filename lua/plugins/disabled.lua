@@ -1,5 +1,5 @@
 return {
   -- disable trouble
   { "folke/flash.nvim", enabled = false },
-  { "echasnovski/mini.surround", enabled = false },
+  { "nvim-mini/mini.surround", enabled = false },
 }

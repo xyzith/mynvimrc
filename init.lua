@@ -16,3 +16,29 @@ vim.g.clipboard = {
   },
   cache_enabled = true,
 }
+
+-- didsable newrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("neo-tree").setup({
+  event_handlers = {
+    {
+      event = "file_opened",
+      handler = function()
+        require("neo-tree.command").execute({ action = "close" })
+      end,
+    },
+  },
+  filesystem = {
+    hijack_netrw_behavior = "open_default",
+  },
+})
+
+-- auto cd to current folder
+vim.cmd([[
+  augroup FzfLuaCwd
+    autocmd!
+    autocmd BufEnter * execute 'cd '.expand('%:p:h')
+  augroup END
+]])
