@@ -22,13 +22,6 @@ return {
     {
       "<leader>//",
       function()
-        require("fzf-lua").live_grep()
-      end,
-      desc = "Search text in root dir",
-    },
-    {
-      "<leader>/c",
-      function()
         require("fzf-lua").live_grep({
           cwd = vim.fn.expand("%:p:h"),
         })
